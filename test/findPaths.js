@@ -5,6 +5,8 @@ var packfinder = require('../index');
 
 var packs = packfinder.findPaths();
 
+console.log(packs)
+
 describe('packfinder: findPaths', function() {
   it('should automatically include seed packs (from package.json)', function() {
     assert.ok(packs.some(function(pack) {
@@ -15,6 +17,12 @@ describe('packfinder: findPaths', function() {
   it('should include seed pack dependencies', function() {
     assert.ok(packs.some(function(pack) {
       return /seed-props/.test(pack);
+    }));
+  });
+
+  it('should automatically include @seedcss/seed packs (from package.json)', function() {
+    assert.ok(packs.some(function(pack) {
+      return /@seedcss\/seed-color-scheme/.test(pack);
     }));
   });
 });
