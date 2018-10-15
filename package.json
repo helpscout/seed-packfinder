@@ -38,6 +38,7 @@
     "find-root": "^1.0.0"
   },
   "devDependencies": {
+    "@seedcss/seed-color-scheme": "0.0.6",
     "chai": "^3.5.0",
     "mocha": "^2.5.3",
     "seed-breakpoints": "^0.3.1"
