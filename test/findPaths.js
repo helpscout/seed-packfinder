@@ -5,8 +5,6 @@ var packfinder = require('../index');
 
 var packs = packfinder.findPaths();
 
-console.log(packs)
-
 describe('packfinder: findPaths', function() {
   it('should automatically include seed packs (from package.json)', function() {
     assert.ok(packs.some(function(pack) {
